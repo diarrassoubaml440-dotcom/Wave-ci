@@ -4,7 +4,7 @@
  */
 import TheLogo from '@/components/atoms/TheLogo.vue'
 import NavMenu from '@/components/molecules/NavMenu.vue'
-import { primaryNav, /* secondaryNav */ } from '@/data/navigation.js'
+import { primaryNav } from '@/data/navbar.js'
 
 // Transmet l'événement 'navigate' au Layout parent (App.vue)
 const emit = defineEmits(['navigate'])
@@ -13,18 +13,11 @@ const emit = defineEmits(['navigate'])
 const handleNavigation = (href) => {
   if (href === '/business' || href === 'business') {
     emit('navigate', 'business')
-  } else if (href === 'about' || href === '/about') {
-    emit('navigate', 'about')
-  } else if (href === 'careers' || href === '/careers') {
-    emit('navigate', 'careers')
-  } else if (href === 'blog' || href === '/blog' || href === '/fr/blog') {
-    emit('navigate', 'blog') //  Déclenche l'affichage de l'index du Blog
   } else {
     emit('navigate', 'home')
   }
 }
 </script>
-
 <template>
   <header class="navbar">
     <div class="navbar__inner container">
@@ -33,7 +26,6 @@ const handleNavigation = (href) => {
 
         <NavMenu :items="primaryNav" @navigate="handleNavigation" />
       </div>
-      <!-- <NavMenu :items="secondaryNav" @navigate="handleNavigation" /> -->
     </div>
   </header>
 </template>

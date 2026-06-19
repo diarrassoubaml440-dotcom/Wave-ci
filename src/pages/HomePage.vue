@@ -15,13 +15,13 @@ defineEmits(['navigate'])
 
 <template>
   <DefaultLayout @navigate="$emit('navigate', $event)">
-    
+
     <HeroSection />
-    
+
     <FeaturesSection />
-    
+
     <TestimonialsSection />
-    
+
   </DefaultLayout>
 </template>
 

@@ -17,20 +17,12 @@ defineProps({
 
 <template>
   <section class="business-features">
-    
-    <div 
-      v-for="item in features" 
-      :key="item.id"
-      :id="item.id"
-      class="feature-section-row"
-      :class="{ 'feature-section-row--dark-bg': item.isDarkBg }"
-    >
+
+    <div v-for="item in features" :key="item.id" :id="item.id" class="feature-section-row"
+      :class="{ 'feature-section-row--dark-bg': item.isDarkBg }">
       <div class="feature-row container">
-        
-        <div 
-          class="feature-row__content"
-          :style="{ order: item.imageRight ? 1 : 2 }"
-        >
+
+        <div class="feature-row__content" :style="{ order: item.imageRight ? 1 : 2 }">
           <div class="feature-row__badge-wrapper">
             <img :src="item.badgeIcon" alt="" class="feature-row__badge-icon" aria-hidden="true" />
             <span class="feature-row__badge-text">{{ item.badgeText }}</span>
@@ -45,20 +37,14 @@ defineProps({
           </BaseText>
         </div>
 
-        <div 
-          class="feature-row__visual"
-          :style="{ order: item.imageRight ? 2 : 1 }"
-        >
-          <div v-if="item.patternImg" class="feature-row__pattern-wrapper" :class="item.patternClass" aria-hidden="true">
+        <div class="feature-row__visual" :style="{ order: item.imageRight ? 2 : 1 }">
+          <div v-if="item.patternImg" class="feature-row__pattern-wrapper" :class="item.patternClass"
+            aria-hidden="true">
             <img :src="item.patternImg" alt="" class="feature-row__pattern-img" />
           </div>
-          
+
           <div class="feature-row__image-container">
-            <img 
-              :src="item.visualImg" 
-              :alt="item.title" 
-              class="feature-row__image" 
-            />
+            <img :src="item.visualImg" :alt="item.title" class="feature-row__image" />
           </div>
         </div>
 
@@ -190,26 +176,31 @@ defineProps({
 /* Feature 4 : API Checkout — maquette téléphone */
 .feature-row__image.img--checkout {
   /* 1. On lui redonne une taille normale adaptée à la maquette */
-  width: 45%; 
-  max-width: 320px; /* Évite qu'il devienne trop grand sur écran géant */
+  width: 45%;
+  max-width: 320px;
+  /* Évite qu'il devienne trop grand sur écran géant */
   height: auto;
-  
+
   /* 2. On retire les anciennes propriétés qui écrasaient le style global */
-  border-radius: 0; 
+  border-radius: 0;
   box-shadow: none;
 
   /* 3. Déplacement et positionnement */
-  position: absolute; /* Permet de le faire flotter par-dessus le motif violet */
+  position: absolute;
+  /* Permet de le faire flotter par-dessus le motif violet */
   top: 50%;
-  right: auto; left: 25%;
-  transform: translateY(-50%); /* Centre verticalement le téléphone */
-  
+  right: auto;
+  left: 25%;
+  transform: translateY(-50%);
+  /* Centre verticalement le téléphone */
+
   /* --- OPTIONS DE DÉPLACEMENT HORIZONTAL --- */
-  
+
   /* Option A : Pour le CENTRER parfaitement dans la zone de droite */
-  
- /*  transform: translate(-50%, -50%) */;
-  
+
+  /*  transform: translate(-50%, -50%) */
+  ;
+
 }
 
 /* --- DECORATIONS D'ARRIÈRE-PLAN --- */
@@ -280,8 +271,13 @@ defineProps({
   }
 
   /* Ajustements responsive par image */
-  .feature-row__image.img--merchantscan { max-width: 100%; }
-  .feature-row__image.img--checkout     { max-width: 260px; }
+  .feature-row__image.img--merchantscan {
+    max-width: 100%;
+  }
+
+  .feature-row__image.img--checkout {
+    max-width: 260px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -299,6 +295,8 @@ defineProps({
     font-size: 1.15rem;
   }
 
-  .feature-row__image.img--checkout { max-width: 220px; }
+  .feature-row__image.img--checkout {
+    max-width: 220px;
+  }
 }
 </style>

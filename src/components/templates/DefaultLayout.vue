@@ -1,5 +1,5 @@
 <script setup>
-import TheAnnouncementBar from '@/components/organisms/TheAnnouncementBar.vue'
+import TheBanner from '@/components/organisms/TheBanner.vue'
 import TheNavbar from '@/components/organisms/TheNavbar.vue'
 import TheFooter from '@/components/organisms/TheFooter.vue'
 
@@ -8,13 +8,13 @@ defineEmits(['navigate'])
 </script>
 
 <template>
-  <TheAnnouncementBar />
-  
+  <TheBanner />
+
   <TheNavbar @navigate="$emit('navigate', $event)" />
-  
+
   <main>
     <slot />
   </main>
-  
+
   <TheFooter />
 </template>

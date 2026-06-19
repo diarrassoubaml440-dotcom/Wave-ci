@@ -41,5 +41,20 @@ defineProps({
 .feature-card__title {
   font-size: 1.3rem;
   text-wrap: balance;
+  animation: apparition 1.5s ease-out forwards;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Le texte part 30px plus bas */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* Le texte revient à sa position initiale */
+  }
 }
 </style>

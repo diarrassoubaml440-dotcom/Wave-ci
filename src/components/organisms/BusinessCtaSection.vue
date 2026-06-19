@@ -13,12 +13,12 @@ import roundPatternUrl from '@/assets/images/round_pattern_light_blue.svg'
 <template>
   <section class="business-cta">
     <div class="business-cta__container container">
-      
+
       <div class="business-cta__content">
         <BaseHeading tag="h2" class="business-cta__title">
           Commencez avec Wave Business
         </BaseHeading>
-        
+
         <div class="business-cta__actions">
           <a href="#contact" class="business-cta__btn-link">
             Contacter l'équipe commerciale
@@ -27,21 +27,22 @@ import roundPatternUrl from '@/assets/images/round_pattern_light_blue.svg'
       </div>
 
       <div class="business-cta__decor" aria-hidden="true">
-        <img :src="roundPatternUrl" alt="" class="business-cta__pattern-img" />
+        <img :src="roundPatternUrl" alt="" class="roundPattern3" />
       </div>
 
     </div>
   </section>
 </template>
-
+s
 <style scoped>
 .business-cta {
   /* Le bleu officiel vif de Wave visible sur la capture */
-  background-color: #1dc2f1; 
+  background-color: #1dc2f1;
   padding-top: 100px;
   padding-bottom: 100px;
   position: relative;
-  overflow: hidden; /* Empêche le motif de déborder de la section */
+  overflow: hidden;
+  /* Empêche le motif de déborder de la section */
   width: 100%;
 }
 
@@ -50,7 +51,8 @@ import roundPatternUrl from '@/assets/images/round_pattern_light_blue.svg'
   align-items: center;
   justify-content: space-between;
   position: relative;
-  z-index: 2; /* Garde le texte et le bouton au-dessus du motif */
+  z-index: 2;
+  /* Garde le texte et le bouton au-dessus du motif */
 }
 
 /* Alignement net à gauche comme sur l'image */
@@ -83,11 +85,13 @@ import roundPatternUrl from '@/assets/images/round_pattern_light_blue.svg'
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  color: #1dc2f1; /* Écrit avec la même teinte de bleu */
+  color: #1dc2f1;
+  /* Écrit avec la même teinte de bleu */
   font-size: 1.3rem;
   font-weight: 700;
   padding: 18px 44px;
-  border-radius: 40px; /* Bords parfaitement ovales/pilule */
+  border-radius: 40px;
+  /* Bords parfaitement ovales/pilule */
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease-in-out;
@@ -113,7 +117,7 @@ import roundPatternUrl from '@/assets/images/round_pattern_light_blue.svg'
   z-index: 1;
 }
 
-.business-cta__pattern-img {
+.roundPattern3 {
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -125,7 +129,7 @@ import roundPatternUrl from '@/assets/images/round_pattern_light_blue.svg'
   .business-cta__title {
     font-size: 3rem;
   }
-  
+
   .business-cta__decor {
     width: 35%;
     right: -2%;
@@ -152,7 +156,8 @@ import roundPatternUrl from '@/assets/images/round_pattern_light_blue.svg'
   .business-cta__btn-link {
     font-size: 1.1rem;
     padding: 16px 32px;
-    width: 100%; /* S'étend sur toute la largeur sur mobile */
+    width: 100%;
+    /* S'étend sur toute la largeur sur mobile */
     text-align: center;
   }
 

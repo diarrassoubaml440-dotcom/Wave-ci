@@ -1,17 +1,13 @@
-<script setup>
-
-</script>
-
 <template>
-  <div class="announcement">
+  <div class="banner">
     <span>Vous voulez rejoindre Wave?&nbsp;</span>
-    <a href="#">Consultez nos postes ouverts ici</a>
-    <span class="arrow" aria-hidden="true">→</span>
+    <a href="#" class="lien">Consultez nos postes ouverts ici</a>
+    <span class="icon">↗️</span>
   </div>
 </template>
 
 <style scoped>
-.announcement {
+.banner {
   background: var(--wave-orange);
   color: #fff;
   text-align: center;
@@ -19,12 +15,14 @@
   font-size: 0.95rem;
   padding: 14px 16px;
 }
-.announcement a {
+
+.lien {
   color: #fff;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.arrow {
+
+.icon {
   color: var(--wave-yellow);
   margin-left: 12px;
   font-weight: 800;

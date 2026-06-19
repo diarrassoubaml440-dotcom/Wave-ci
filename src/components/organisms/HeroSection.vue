@@ -15,7 +15,7 @@ import RoundPIndigo from '@/assets/images/RoundPIndigo.png'
 
     <img :src="RoundPIndigo" class="hero__pattern" alt="" aria-hidden="true" />
 
-    <div class="hero__inner container">
+    <div class="hero__innercontainer">
       <div class="hero__content">
         <BaseHeading :level="1" class="hero__title">
           Votre allié<br />mobile money
@@ -28,7 +28,7 @@ import RoundPIndigo from '@/assets/images/RoundPIndigo.png'
         <StoreButtons class="hero__stores" />
       </div>
 
-      <div class="hero__visual">  
+      <div class="hero__visual">
         <PhoneMockup />
       </div>
     </div>
@@ -43,7 +43,7 @@ import RoundPIndigo from '@/assets/images/RoundPIndigo.png'
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-.hero__inner {
+.hero__innercontainer {
   position: relative;
   z-index: 2;
   display: grid;
@@ -60,6 +60,7 @@ import RoundPIndigo from '@/assets/images/RoundPIndigo.png'
 .hero__content {
   display: flex;
   flex-direction: column;
+  animation: apparition 2.5s ease-out forwards;
 }
 
 .hero__title {
@@ -155,6 +156,21 @@ import RoundPIndigo from '@/assets/images/RoundPIndigo.png'
 
   .hero__lines {
     width: 180px;
+  }
+}
+
+/* Définition des mouvements */
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+    /* Le texte part 30px plus bas */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    /* Le texte revient à sa position initiale */
   }
 }
 </style>
